@@ -68,3 +68,25 @@ const amplitudeNew = calcTempAmplitudeNew([3, 5, 1], [9, 0, 5]);
 console.log(amplitudeNew);
 */
 
+const measureKelvin = function () {
+    const measurement ={
+        type: 'temp',
+        unit: 'celsius',
+        // C) Fix bug
+        value: prompt('Degrees celsius: ')
+
+        }
+
+        // B) Find bug
+        console.log(measurement);
+        console.table(measurement);
+        // console.log(measurement.value);
+        // console.warn(measurement.value);
+        // console.error(measurement.value);
+
+    const kelvin = Number(measurement.value) + 273;
+    return kelvin;
+}
+
+// A) Identify the bug
+console.log(measureKelvin());
